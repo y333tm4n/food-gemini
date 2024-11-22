@@ -87,7 +87,7 @@ function createMealSuggestionPrompt(inventory: InventoryItem[]): string {
   }, {} as Record<string, InventoryItem[]>);
 
   // Create a structured inventory list
-  let inventoryList = Object.entries(categorizedItems)
+  const inventoryList = Object.entries(categorizedItems)
     .map(([category, items]) => {
       const itemsList = items
         .map(item => `${item.name} (${item.quantity})`)
